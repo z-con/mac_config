@@ -17,7 +17,6 @@ brew install \
     tmux \
     neovim \
     lazygit \
-    aerospace \
     gh \
     git \
     uv \
@@ -25,6 +24,10 @@ brew install \
     fd \
     fzf \
     btop
+
+# AeroSpace is on its own tap
+brew tap nikitabobko/tap
+brew install nikitabobko/tap/aerospace
 
 # ── Fonts ───────────────────────────────────────────────────────────────────────
 brew install --cask font-meslo-lg-nerd-font
