@@ -25,15 +25,15 @@ brew install \
     fzf \
     btop
 
-# AeroSpace is on its own tap
-brew tap nikitabobko/tap
-brew install nikitabobko/tap/aerospace
+# Yabai + skhd are on their own tap
+brew tap koekeishiya/formulae
+brew install yabai skhd
 
 # ── Fonts ───────────────────────────────────────────────────────────────────────
 brew install --cask font-meslo-lg-nerd-font
 
 # ── Apps ────────────────────────────────────────────────────────────────────────
-brew install --cask ghostty hammerspoon
+brew install --cask ghostty
 
 # ── Symlink configs ─────────────────────────────────────────────────────────────
 symlink() {
@@ -50,15 +50,21 @@ symlink() {
 echo ""
 echo "Symlinking configs..."
 
-symlink "$DOTFILES/.config/aerospace"   "$CONFIG/aerospace"
-symlink "$DOTFILES/.config/fish"        "$CONFIG/fish"
-symlink "$DOTFILES/.config/tmux"        "$CONFIG/tmux"
-symlink "$DOTFILES/.config/nvim"        "$CONFIG/nvim"
-symlink "$DOTFILES/.config/git"         "$CONFIG/git"
-symlink "$DOTFILES/.config/lazygit"     "$CONFIG/lazygit"
-symlink "$DOTFILES/.config/ghostty"     "$CONFIG/ghostty"
+symlink "$DOTFILES/.config/yabai"         "$CONFIG/yabai"
+symlink "$DOTFILES/.config/skhd"          "$CONFIG/skhd"
+symlink "$DOTFILES/.config/fish"          "$CONFIG/fish"
+symlink "$DOTFILES/.config/tmux"          "$CONFIG/tmux"
+symlink "$DOTFILES/.config/nvim"          "$CONFIG/nvim"
+symlink "$DOTFILES/.config/git"           "$CONFIG/git"
+symlink "$DOTFILES/.config/lazygit"       "$CONFIG/lazygit"
+symlink "$DOTFILES/.config/ghostty"       "$CONFIG/ghostty"
 symlink "$DOTFILES/.config/starship.toml" "$CONFIG/starship.toml"
-symlink "$DOTFILES/.hammerspoon"          "$HOME/.hammerspoon"
+
+chmod +x "$CONFIG/yabai/yabairc"
+
+# ── Start services ──────────────────────────────────────────────────────────────
+yabai --start-service
+skhd --start-service
 
 # ── Fish as default shell ────────────────────────────────────────────────────────
 FISH_PATH="$(brew --prefix)/bin/fish"
@@ -70,16 +76,11 @@ if [ "$SHELL" != "$FISH_PATH" ]; then
     echo "Default shell set to fish — restart your terminal."
 fi
 
-# ── Accessibility permissions ───────────────────────────────────────────────────
+# ── Permissions ─────────────────────────────────────────────────────────────────
 echo ""
-echo "Grant Accessibility access to both apps:"
-echo "  System Settings → Privacy & Security → Accessibility"
-echo "    ✓ AeroSpace"
-echo "    ✓ Hammerspoon"
-echo ""
-echo "Then in System Settings → Trackpad → More Gestures:"
-echo "  Set 'Swipe between full-screen apps' to 4 fingers (or Off)"
-echo "  so Hammerspoon can intercept 3-finger swipes."
+echo "Grant Accessibility access in System Settings → Privacy & Security → Accessibility:"
+echo "    ✓ Yabai"
+echo "    ✓ skhd"
 
 echo ""
 echo "Done. Open a new terminal to pick up fish + starship."

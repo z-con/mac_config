@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+# Layout
+yabai -m config layout bsp
+
+# Gaps
+yabai -m config top_padding    8
+yabai -m config bottom_padding 8
+yabai -m config left_padding   8
+yabai -m config right_padding  8
+yabai -m config window_gap     8
+
+# Mouse
+yabai -m config mouse_follows_focus off
+yabai -m config focus_follows_mouse off
+yabai -m config mouse_modifier  alt
+yabai -m config mouse_action1   move
+yabai -m config mouse_action2   resize
+
+# Float system/utility windows
+yabai -m rule --add app="^System Settings$"    manage=off
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Zoom$"               manage=off
+yabai -m rule --add app="^Finder$"             manage=off
+yabai -m rule --add app="^Passwords$"          manage=off
+yabai -m rule --add app="^Activity Monitor$"   manage=off
+yabai -m rule --add app="^Calculator$"         manage=off

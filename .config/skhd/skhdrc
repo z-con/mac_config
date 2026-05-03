@@ -1,0 +1,35 @@
+# ── Focus ──────────────────────────────────────────────────────────────────────
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+alt - left  : yabai -m window --focus west
+alt - down  : yabai -m window --focus south
+alt - up    : yabai -m window --focus north
+alt - right : yabai -m window --focus east
+
+# ── Move (swap) ────────────────────────────────────────────────────────────────
+alt + shift - h : yabai -m window --swap west
+alt + shift - j : yabai -m window --swap south
+alt + shift - k : yabai -m window --swap north
+alt + shift - l : yabai -m window --swap east
+alt + shift - left  : yabai -m window --swap west
+alt + shift - down  : yabai -m window --swap south
+alt + shift - up    : yabai -m window --swap north
+alt + shift - right : yabai -m window --swap east
+
+# ── Resize ─────────────────────────────────────────────────────────────────────
+alt + ctrl - left  : yabai -m window --resize right:-50:0 || yabai -m window --resize left:-50:0
+alt + ctrl - right : yabai -m window --resize right:50:0  || yabai -m window --resize left:50:0
+alt + ctrl - up    : yabai -m window --resize bottom:0:-50 || yabai -m window --resize top:0:-50
+alt + ctrl - down  : yabai -m window --resize bottom:0:50  || yabai -m window --resize top:0:50
+
+# ── Layout ─────────────────────────────────────────────────────────────────────
+alt - f             : yabai -m window --toggle zoom-fullscreen
+alt + shift - space : yabai -m window --toggle float; yabai -m window --grid 4:4:1:1:2:2
+
+# ── Balance / equalize ─────────────────────────────────────────────────────────
+alt - e : yabai -m space --balance
+
+# ── Reload ─────────────────────────────────────────────────────────────────────
+alt + shift - r : yabai --restart-service
