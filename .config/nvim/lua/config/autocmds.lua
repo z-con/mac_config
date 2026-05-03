@@ -1,0 +1,1 @@
+-- LazyVim autocmds are the base; add overrides here.

@@ -1,0 +1,21 @@
+add_newline = true
+command_timeout = 200
+
+[character]
+success_symbol = "[❯](cyan)"
+error_symbol   = "[✗](cyan)"
+
+[directory]
+truncation_length = 2
+truncate_to_repo  = true
+style             = "bold cyan"
+
+[git_branch]
+style  = "italic cyan"
+symbol = ""
+
+[git_status]
+ahead  = "⇡${count}"
+behind = "⇣${count}"
+modified = "!"
+untracked = "?"

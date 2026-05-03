@@ -1,0 +1,33 @@
+[alias]
+    co = checkout
+    br = branch
+    c  = commit
+    s  = status
+
+[init]
+    defaultBranch = master
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+
+[diff]
+    algorithm = histogram
+    mnemonicPrefix = true
+
+[rerere]
+    enabled = true
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[column]
+    ui = auto
+
+[credential "https://github.com"]
+    helper = !/opt/homebrew/bin/gh auth git-credential

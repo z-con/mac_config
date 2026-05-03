@@ -1,0 +1,7 @@
+font-family = "MesloLGS Nerd Font"
+font-size = 13
+window-padding-x = 14
+window-padding-y = 14
+cursor-style = block
+shell-integration-features = no-cursor
+theme = "Catppuccin Mocha"
