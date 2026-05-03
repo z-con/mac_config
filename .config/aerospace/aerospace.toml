@@ -91,9 +91,9 @@ alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-0 = 'move-node-to-workspace 10'
 
 # ── Sequential workspace navigation — no wrap (mirrors workspace-scroll.sh) ────
-alt-tab         = 'workspace-back-and-forth'
-alt-shift-tab   = 'workspace next'
-alt-shift-grave = 'workspace prev'
+alt-tab       = 'workspace-back-and-forth'
+alt-shift-tab = 'workspace next'
+alt-ctrl-tab  = 'workspace prev'
 
 # ── System ─────────────────────────────────────────────────────────────────────
 alt-shift-r         = 'reload-config'
