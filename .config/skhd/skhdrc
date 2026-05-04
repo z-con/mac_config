@@ -1,5 +1,5 @@
 # ── Apps ───────────────────────────────────────────────────────────────────────
-ctrl - return : osascript -e 'tell application "iTerm" to create window with default profile'
+ctrl + alt - return : osascript -e 'tell application "iTerm" to create window with default profile'
 
 # ── Focus ──────────────────────────────────────────────────────────────────────
 alt - h : yabai -m window --focus west
